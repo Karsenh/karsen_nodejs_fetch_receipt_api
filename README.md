@@ -5,19 +5,22 @@ This NodeJS application was written by Karsen Hansen as a backend take-home assi
 
 ## Running the Server
 ### Docker Instructions
-1. Open a new terminal window, cd to this project, & build the NodeJS project docker Image with command:
-> docker build -t karsen_nodejs_receipt_api .
+Open a new terminal window, cd to this project, & build the NodeJS project docker Image with command:
 
-2. Run the newly created NodeJS project Image with command:
-> docker run -p 5001:5001 karsen_nodejs_receipt_api
+    docker build -t karsen_nodejs_receipt_api .
+
+Run the newly created NodeJS project Image with command:
+
+    docker run -p 5001:5001 karsen_nodejs_receipt_api
 
 ****NOTE:** All tests should execute (and pass) before the server starts but you can also run tests with command:
 
-> docker run --rm karsen_nodejs_receipt_api npm test
+    docker run --rm karsen_nodejs_receipt_api npm test
 
 3. Make requests to the receipt route endpoints:
-    - */receipt/process*
-    - */receipt/:id/points*
+    > */receipt/process*
+    
+    > */receipt/:id/points*
 
 
 ## Making the Requests
