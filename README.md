@@ -22,6 +22,43 @@ This NodeJS application was written by Karsen Hansen as a backend take-home assi
 
 ****NOTE:** `NodeJS Fetch Receipt API.postman_collection.json` file is included in the root of this project which can be imported into PostMan to run pre-made requests with provided JSON request body objects.
 
+You can also make requests using curl:
+
+    curl -X POST http://localhost:5001/receipts/process \
+        -H "Content-Type: application/json" \
+        -d '{
+            "retailer": "Target",
+            "purchaseDate": "2022-01-01",
+            "purchaseTime": "13:01",
+            "items": [
+                {
+                "shortDescription": "Mountain Dew 12PK",
+                "price": "6.49"
+                },
+                {
+                "shortDescription": "Emils Cheese Pizza",
+                "price": "12.25"
+                },
+                {
+                "shortDescription": "Knorr Creamy Chicken",
+                "price": "1.26"
+                },
+                {
+                "shortDescription": "Doritos Nacho Cheese",
+                "price": "3.35"
+                },
+                {
+                "shortDescription": "   Klarbrunn 12-PK 12 FL OZ  ",
+                "price": "12.00"
+                }
+            ],
+            "total": "35.35"
+            }'
+
+And to get points (make sure to copy id from previous requests response into the `id` of the following request).
+
+    curl -X GET http://localhost:5001/receipts/<id>/points
+
 4. View the point break-down from the POST request receipts in the terminal window where you started the server.
 
 ## What I would do differently
