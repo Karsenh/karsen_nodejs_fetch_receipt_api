@@ -26,7 +26,7 @@ Run the newly created NodeJS project Image with command:
 ## Making the Requests
 ### PostMan
 
-`NodeJS Fetch Receipt API.postman_collection.json` file is included in the root of this project which can be imported into PostMan to run pre-made requests with provided JSON request body objects.
+`NodeJS Fetch Receipt API.postman_collection.json` file is included in the root of this project which can be imported into PostMan to run pre-made requests with provided JSON request body objects. Don't forget to add http://localhost:5001 as a {{server_base_url}} global env.
 
 ### Curl
 
