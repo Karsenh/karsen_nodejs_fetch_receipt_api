@@ -1,15 +1,14 @@
-# Node Receipt Test
-
+# NodeJS Backend Receipt API
 This NodeJS application was written by Karsen Hansen as a backend take-home assignment for Fetch. This server processes `receipts`, calculates `point` values based on provided rules, and stores points in memory associated by `id` for retrieval later.
 
 <img src="./server_diagram.png" alt="alt text" width="750"/>
 
-## How To Run Server
+## Running the Server
 ### Docker Instructions
-1. Open a new terminal window & build the NodeJS docker image with command:
+1. Open a new terminal window, cd to this project, & build the NodeJS project docker Image with command:
 > docker build -t karsen_nodejs_receipt_api .
 
-2. Run the NodeJS app from the newly created docker image with command:
+2. Run the newly created NodeJS project Image with command:
 > docker run -p 5001:5001 karsen_nodejs_receipt_api
 
 ****NOTE:** All tests should execute (and pass) before the server starts but you can also run tests with command:
@@ -20,9 +19,16 @@ This NodeJS application was written by Karsen Hansen as a backend take-home assi
     - */receipt/process*
     - */receipt/:id/points*
 
-****NOTE:** `NodeJS Fetch Receipt API.postman_collection.json` file is included in the root of this project which can be imported into PostMan to run pre-made requests with provided JSON request body objects.
 
-You can also make requests using curl:
+## Making the Requests
+### PostMan
+
+`NodeJS Fetch Receipt API.postman_collection.json` file is included in the root of this project which can be imported into PostMan to run pre-made requests with provided JSON request body objects.
+
+### Curl
+
+#### 1. Posting the receipt data:
+*copy and paste into terminal:*
 
     curl -X POST http://localhost:5001/receipts/process \
         -H "Content-Type: application/json" \
@@ -55,16 +61,17 @@ You can also make requests using curl:
             "total": "35.35"
             }'
 
-And to get points (make sure to copy id from previous requests response into the `id` of the following request).
+#### 2. Getting the Points (make sure to copy id from previous requests response into the `id` of the following request).
+*copy and paste into terminal:*
 
     curl -X GET http://localhost:5001/receipts/<id>/points
 
-4. View the point break-down from the POST request receipts in the terminal window where you started the server.
+****NOTE** You can view the point break-down, which is calculated based on the receipt data received, in the terminal window where the server is running, while the POST request to `/receipts/process` is made.
 
 ## What I would do differently
 
-1. I would do this in TypeScript, though I haven't done a NodeJS app in TypeScript yet and didn't want this to be the learning project.
+1. I would do this in TypeScript, though I haven't done a NodeJS app in TypeScript yet and didn't want this to be the project I learned on.
 
 2. I would normalize responses for consistency and scalability.
 
-3. I would add as many tests as I could think of - this project includes what I'd consider to be a fair baseline.
+3. I would add as many tests as I could think of - This project includes what I'd consider to be a fair baseline.
