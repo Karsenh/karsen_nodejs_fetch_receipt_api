@@ -1,7 +1,7 @@
 # NodeJS Backend Receipt API
 This NodeJS application was written by Karsen Hansen as a backend take-home assignment for Fetch. This server processes `receipts`, calculates `point` values based on provided rules, and stores points in memory associated by `id` for retrieval later.
 
-<img src="./server_diagram.png" alt="alt text" width="750"/>
+<img src="./nodejs_receipt_api_diagram.svg" alt="alt text" width="1500"/>
 
 ## Running the Server
 ### Docker Instructions
