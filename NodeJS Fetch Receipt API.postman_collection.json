@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "d388d058-87a7-4421-90c8-a7c70d43a003",
+		"name": "NodeJS Fetch Receipt API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28978751"
+	},
+	"item": [
+		{
+			"name": "Process Receipt - Target",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Parse the response body to JSON",
+							"const response = pm.response.json();",
+							"",
+							"// Check if the 'id' property exists",
+							"if (response.id) {",
+							"    // Set the 'receipt_id' environment variable with the 'id' value",
+							"    pm.environment.set(\"receipt_id\", response.id);",
+							"",
+							"    // Log the assigned value for verification",
+							"    console.log(\"receipt_id set to:\", response.id);",
+							"} else {",
+							"    // Log an error message if 'id' is not found",
+							"    console.error(\"The response does not contain an 'id' property\");",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"retailer\": \"Target\",\n  \"purchaseDate\": \"2022-01-01\",\n  \"purchaseTime\": \"13:01\",\n  \"items\": [\n    {\n      \"shortDescription\": \"Mountain Dew 12PK\",\n      \"price\": \"6.49\"\n    },{\n      \"shortDescription\": \"Emils Cheese Pizza\",\n      \"price\": \"12.25\"\n    },{\n      \"shortDescription\": \"Knorr Creamy Chicken\",\n      \"price\": \"1.26\"\n    },{\n      \"shortDescription\": \"Doritos Nacho Cheese\",\n      \"price\": \"3.35\"\n    },{\n      \"shortDescription\": \"   Klarbrunn 12-PK 12 FL OZ  \",\n      \"price\": \"12.00\"\n    }\n  ],\n  \"total\": \"35.35\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server_base_url}}/receipts/process",
+					"host": [
+						"{{server_base_url}}"
+					],
+					"path": [
+						"receipts",
+						"process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Process Receipt - Walgreens",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Parse the response body to JSON",
+							"const response = pm.response.json();",
+							"",
+							"// Check if the 'id' property exists",
+							"if (response.id) {",
+							"    // Set the 'receipt_id' environment variable with the 'id' value",
+							"    pm.environment.set(\"receipt_id\", response.id);",
+							"",
+							"    // Log the assigned value for verification",
+							"    console.log(\"receipt_id set to:\", response.id);",
+							"} else {",
+							"    // Log an error message if 'id' is not found",
+							"    console.error(\"The response does not contain an 'id' property\");",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"retailer\": \"Walgreens\",\n    \"purchaseDate\": \"2022-01-02\",\n    \"purchaseTime\": \"08:13\",\n    \"total\": \"2.65\",\n    \"items\": [\n        {\"shortDescription\": \"Pepsi - 12-oz\", \"price\": \"1.25\"},\n        {\"shortDescription\": \"Dasani\", \"price\": \"1.40\"}\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server_base_url}}/receipts/process",
+					"host": [
+						"{{server_base_url}}"
+					],
+					"path": [
+						"receipts",
+						"process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Process Receipt - M&M Corner Market",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Parse the response body to JSON",
+							"const response = pm.response.json();",
+							"",
+							"// Check if the 'id' property exists",
+							"if (response.id) {",
+							"    // Set the 'receipt_id' environment variable with the 'id' value",
+							"    pm.environment.set(\"receipt_id\", response.id);",
+							"",
+							"    // Log the assigned value for verification",
+							"    console.log(\"receipt_id set to:\", response.id);",
+							"} else {",
+							"    // Log an error message if 'id' is not found",
+							"    console.error(\"The response does not contain an 'id' property\");",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"retailer\": \"M&M Corner Market\",\n  \"purchaseDate\": \"2022-03-20\",\n  \"purchaseTime\": \"14:33\",\n  \"items\": [\n    {\n      \"shortDescription\": \"Gatorade\",\n      \"price\": \"2.25\"\n    },{\n      \"shortDescription\": \"Gatorade\",\n      \"price\": \"2.25\"\n    },{\n      \"shortDescription\": \"Gatorade\",\n      \"price\": \"2.25\"\n    },{\n      \"shortDescription\": \"Gatorade\",\n      \"price\": \"2.25\"\n    }\n  ],\n  \"total\": \"9.00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server_base_url}}/receipts/process",
+					"host": [
+						"{{server_base_url}}"
+					],
+					"path": [
+						"receipts",
+						"process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Receipt Points",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server_base_url}}/receipts/{{receipt_id}}/points",
+					"host": [
+						"{{server_base_url}}"
+					],
+					"path": [
+						"receipts",
+						"{{receipt_id}}",
+						"points"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "receipt_id",
+			"value": "null",
+			"type": "default"
+		}
+	]
+}

@@ -4,7 +4,7 @@ This NodeJS application was written by Karsen Hansen as a backend take-home assi
 
 <img src="./server_diagram.png" alt="alt text" width="750"/>
 
-## How To Run Server!
+## How To Run Server
 ### Docker Instructions
 1. Open a new terminal window & build the NodeJS docker image with command:
 > docker build -t karsen_nodejs_receipt_api .
@@ -20,7 +20,9 @@ This NodeJS application was written by Karsen Hansen as a backend take-home assi
     - */receipt/process*
     - */receipt/:id/points*
 
-4. View the point break-down from the POST request receipt in the terminal window where you started the server.
+****NOTE:** `NodeJS Fetch Receipt API.postman_collection.json` file is included in the root of this project which can be imported into PostMan to run pre-made requests with provided JSON request body objects.
+
+4. View the point break-down from the POST request receipts in the terminal window where you started the server.
 
 ## What I would do differently
 
