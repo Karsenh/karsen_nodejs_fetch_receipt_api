@@ -18,9 +18,9 @@ Run the newly created NodeJS project Image with command:
     docker run --rm karsen_nodejs_receipt_api npm test
 
 3. Make requests to the receipt route endpoints:
-    > */receipt/process*
+    > *http://localhost:5001/receipt/process*
     
-    > */receipt/:id/points*
+    > *http://localhost:5001/receipt/:id/points*
 
 
 ## Making the Requests
