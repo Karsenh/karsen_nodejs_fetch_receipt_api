@@ -2,7 +2,7 @@
 
 This NodeJS application was written by Karsen Hansen as a backend take-home assignment for Fetch. This server processes `receipts`, calculates `point` values based on provided rules, and stores points in memory associated by `id` for retrieval later.
 
-<img src="image.png" alt="alt text" width="750"/>
+<img src="./server_diagram.svg" alt="alt text" width="750"/>
 
 ## How To Run Server
 ### Docker Instructions
