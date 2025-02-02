@@ -35,6 +35,8 @@ export class Receipt {
         // Normally I would not include console.log statements in production code but I'm leaving them in for demonstration purposes.
         // I would also typically just assign the points += to the calculation but for the sake of breaking down the points I created a rule#pts variable.
 
+        console.log(`--- Calculating points for retailer: ${this.retailer} @ timestamp ${new Date().toISOString()} ---`);
+
         // One point for every alphanumeric character in the retailer name.
         const rule1pts = this.retailer.replace(/[^a-z0-9]/gi, '').length;
         points += rule1pts
