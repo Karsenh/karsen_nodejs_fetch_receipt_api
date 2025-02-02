@@ -2,9 +2,9 @@
 
 This NodeJS application was written by Karsen Hansen as a backend take-home assignment for Fetch. This server processes `receipts`, calculates `point` values based on provided rules, and stores points in memory associated by `id` for retrieval later.
 
-<img src="./server_diagram.svg" alt="alt text" width="750"/>
+<img src="./server_diagram.png" alt="alt text" width="750"/>
 
-## How To Run Server
+## How To Run Server!
 ### Docker Instructions
 1. Open a new terminal window & build the NodeJS docker image with command:
 > docker build -t karsen_nodejs_receipt_api .
