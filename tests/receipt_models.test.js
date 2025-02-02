@@ -1,6 +1,9 @@
 import { Receipt, ReceiptItem } from '../models/Receipt.js';
 import { ReceiptPoints } from '../models/ReceiptPoints.js';
 
+/**
+ * modes -> Receipt.js / ReceiptPoints.js Tests
+ */
 describe('Receipt Models', () => {
     describe('ReceiptItem', () => {
         it('should create a ReceiptItem with correct properties', () => {

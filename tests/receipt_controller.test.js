@@ -9,6 +9,9 @@ jest.mock('../validators/receipt_validators.js');
 jest.mock('../models/Receipt.js');
 jest.mock('../models/ReceiptPoints.js');
 
+/**
+ * receipt_controller -> processReceiptById() Tests
+ */
 describe('Receipt Controller - Process Receipt', () => {
     let req, res, next;
 
@@ -50,6 +53,9 @@ describe('Receipt Controller - Process Receipt', () => {
     });
 });
 
+/**
+ * receipt_controller -> getReceiptById() Tests
+ */
 describe('Receipt Controller - Get Receipt Points By Id', () => {
     let req, res, next;
     let RECEIPT_POINTS_BY_ID_ARR;

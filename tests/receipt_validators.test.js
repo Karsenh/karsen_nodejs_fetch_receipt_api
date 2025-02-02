@@ -1,6 +1,9 @@
 import { PURCHASE_DATE_ERROR, RETAILER_ERROR } from '../constants/receipt_validator_errors';
 import { validateReceiptBody } from '../validators/receipt_validators';
 
+/**
+ * validators -> receipt_validators.js Tests
+ */
 describe('validateReceiptBody', () => {
     it('should return status 200 for valid receipt data', () => {
         const req = {
